@@ -1,0 +1,17 @@
+<div class="market-wrapper">
+    <h3>헬스장 장터</h3>
+
+    <div class="main-market-box market-box" ng-repeat="list in $ctrl.market_list track by $index">
+        <img class="market-box-img" ng-src="{{list.img}}"/>
+        <h4>{{list.title}}</h4>
+        <h4 class="main-market-cash">{{list.charge}}<label class="label label-danger" ng-if="list.type">HOT</label></h4>
+        <h5>무료배송</h5>
+    </div>
+</div>
+
+<footer class="text-white">
+        - 서울과학기술대학교 마케팅창업전략 전미조<br>
+        - 권진승, 박진평, 김성연, 이상운<br>
+        - 헬스장 플랫폼 서비스 프로토타입<br>
+        - 가로규격 480px이상의 기기에서는 레이아웃 깨짐 혹은 보이지가 않습니다.
+</footer>

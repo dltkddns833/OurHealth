@@ -1,0 +1,23 @@
+<div class="comunity-wrapper">
+    <h3>헬스장 커뮤니티</h3>
+    <p>서울과학기술대학교 피트니스 클럽</p>
+    <div class="main-comunity-box main-box comunity-box" ng-repeat="list in $ctrl.comunity_list track by $index">
+        <img class="comunity-box-img" ng-src="{{list.img}}"/>
+        <div>
+            <h4>{{list.title}}</h4>
+            <ul>
+                <li>{{list.name}}</li>
+                <li>{{list.date}}</li>
+                <li><label class="label" ng-class="list.type">좋아요 {{list.like}}</label></li>
+            </ul>
+            <p>{{list.desc}}</p>
+        </div>
+    </div>
+</div>
+
+<footer class="text-white">
+        - 서울과학기술대학교 마케팅창업전략 전미조<br>
+        - 권진승, 박진평, 김성연, 이상운<br>
+        - 헬스장 플랫폼 서비스 프로토타입<br>
+        - 가로규격 480px이상의 기기에서는 레이아웃 깨짐 혹은 보이지가 않습니다.
+</footer>

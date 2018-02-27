@@ -1,0 +1,18 @@
+<div class="health-warpper">
+    <h3> 나만의 운동법 </h3>
+
+    <div class="main-health-box health-box" ng-repeat="list in $ctrl.health_list track by $index">
+        <img class="health-box-img" ng-src="{{list.img}}" />
+        <div class="main-health-contents">
+            <h4 class="text-white">{{list.title}}</h4>
+            <p class="text-white">{{list.desc}}</p>
+        </div>
+    </div>
+</div>
+
+<footer class="text-white">
+        - 서울과학기술대학교 마케팅창업전략 전미조<br>
+        - 권진승, 박진평, 김성연, 이상운<br>
+        - 헬스장 플랫폼 서비스 프로토타입<br>
+        - 가로규격 480px이상의 기기에서는 레이아웃 깨짐 혹은 보이지가 않습니다.
+</footer>

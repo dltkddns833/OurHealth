@@ -1,0 +1,142 @@
+.main-wrapper{
+    margin-top: -20px;
+}
+
+/*Introduce*/
+.main-introduce{
+    background-color: #fcd66f;
+    padding: 10px;
+    text-align: right;
+}
+
+.main-introduce h2{
+    text-align: left;
+}
+
+.main-introduce > p{
+    padding-left: 25px;
+    text-align: left;
+}
+
+.main-introduce-progress{
+    text-align: left;
+}
+
+.main-introduce-progress p{
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/*Comunity*/
+
+.main-comunity{
+    padding: 0px 10px;
+}
+
+.main-comunity .icon{
+    background-image: url('../img/comunity-icon.png')
+}
+
+.main-title{
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.main-title label{
+    font-size: 8px;
+    margin-left: 5px;
+}
+
+.main-box{
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.main-comunity-box h4{
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 2px;
+}
+
+.main-comunity-box ul{
+    display: flex;
+}
+.main-comunity-box ul li{
+    margin-left: 5px;
+}
+
+.main-comunity-img{
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/comunity-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Health*/
+.main-health{
+    padding: 0px 10px;
+}
+
+.main-health-box{
+    position: relative;
+}
+
+.main-health-img{
+    width: 100%;
+    height: 200px;
+    background-image: url('../img/main-health.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-health-contents{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    background-color: #000;
+    opacity: .7;
+}
+
+.main-health-contents h4{
+    margin: 5px;
+}
+
+.main-health-contents p{
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+/*Market*/
+.main-market{
+    padding: 0px 10px;
+    margin-bottom: 30px;
+}
+
+.main-market-img{
+    width: 100%;
+    height: 200px;
+    background-image: url('../img/main-market-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-market label{
+    margin-left: 5px;
+}
+
+.main-market-cash{
+    color: #ae0000;
+    font-weight: bold;
+}
+
+.main-market-box h4{
+    min-width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

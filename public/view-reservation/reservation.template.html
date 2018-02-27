@@ -1,0 +1,56 @@
+<div class="reservation-wrapper">
+    <h2>헬스장 예약하기</h2>
+    <div class="reservation-header">
+        <h3>시간 설정</h3>
+        <p>- 당일 예약만 가능합니다.(추후 기간 설정)</p>
+        <div class="reservation-startTime">
+            <h4>1. 운동 시작 시간</h4>
+            <div class="center-block" uib-timepicker ng-model="$ctrl.start_date" ng-change="$ctrl.start_changed()" hour-step="$ctrl.start_hstep" minute-step="$ctrl.start_mstep" show-meridian="$ctrl.start_ismeridian"></div>
+        </div>
+        <div class="reservation-healthTime">
+            <h4>2. 운동 시간 <span ng-if="$ctrl.health_hstep != null">{{$ctrl.health_hstep}}분</span></h4>
+            <select class="form-control" ng-if="$ctrl.health_hstep == null" ng-model="$ctrl.health_hstep" ng-options="opt for opt in $ctrl.health_options.hstep">
+                <option value="">운동 시간을 선택해주세요</option>
+            </select>
+        </div>
+    </div>
+    <!--<pre class="alert alert-info">Time is: {{$ctrl.start_date | date:'shortTime' }}</pre>
+    <pre class="alert alert-info">Time is: {{$ctrl.health_hstep}}</pre>-->
+    <div class="reservation-contents" ng-if="$ctrl.health_hstep != null">
+
+        <h4 class="text-black">오늘의 루틴</h4>
+        <uib-progress class="progress-striped active"><uib-bar ng-repeat="bar in $ctrl.stacked track by $index" value="bar.value" type="{{bar.type}}"><span ng-hide="bar.value < 5">{{bar.name}}</span></uib-bar></uib-progress>
+        <p>남은 시간 {{$ctrl.remainTime}} / {{$ctrl.health_hstep}} (minute)</p>
+        
+        <div class="reservation-tools">
+            <h4>3. 헬스 기구 설정</h4>
+            <select class="form-control" ng-model="$ctrl.tools_step" ng-options="opt for opt in $ctrl.tools_options.tools">
+                <option value="">기구를 선택해주세요</option>
+            </select>
+            <div class="reservation-tools-setTime" ng-if="$ctrl.tools_step != null">
+                <h4>4. {{$ctrl.tools_step}} 예약 시간 설정</h4>
+                <select class="form-control" ng-model="$ctrl.toolTime_step" ng-options="opt for opt in $ctrl.tool_time.minute">
+                    <option value="">사용 시간 선택(분)</option>
+                </select>
+                <h4>5. {{$ctrl.tools_step}} 사용 시작 시간</h4>
+                <div class="center-block" uib-timepicker ng-model="$ctrl.toolStart_time" ng-change="$ctrl.toolStart_changed()" hour-step="$ctrl.toolStart_time_hstep" minute-step="$ctrl.toolStart_time_mstep" show-meridian="$ctrl.toolStart_time_ismeridian"></div>
+                <button class="btn btn-default" ng-click="$ctrl.onClickMathTime()">예약하기</button>
+            </div>
+        </div>
+
+        <div class="reservation-list-group">
+            <h4 class="text-black">예약 현황</h4>
+            <div class="reservation-list" ng-repeat="list in $ctrl.stacked track by $index" ng-if="$odd">
+                <p>{{list.name}}</p>
+                <p>{{list.time}}분</p>
+            </div>
+        </div>
+        <a href="#!/main"><button class="btn btn-warning center-block" ng-click="$ctrl.onSeccessButtonClicked()" >등록하기</button></a>
+    </div>
+</div>
+<footer class="text-white">
+    - 서울과학기술대학교 마케팅창업전략 전미조<br>
+    - 권진승, 박진평, 김성연, 이상운<br>
+    - 헬스장 플랫폼 서비스 프로토타입<br>
+    - 가로규격 480px이상의 기기에서는 레이아웃 깨짐 혹은 보이지가 않습니다.
+</footer>

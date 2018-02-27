@@ -1,0 +1,56 @@
+<div class="main-wrapper">
+    <div class="main-introduce">
+        <h2>이용중인 헬스장</h2>
+        <p>: 서울과학기술대학교 Fitness Club (일반)</p>
+        <a href="#!/reservation"><button class="btn btn-default">예약하러가기</button></a>
+        <div class="main-introduce-progress">
+            <p>현재 헬스장 이용자 {{$ctrl.date | date:'shortTime'}}</p>
+            <uib-progressbar class="progress-striped active" value="$ctrl.randomValue" type="{{$ctrl.randomType}}">{{$ctrl.randomText}}</uib-progressbar>
+        </div>
+    </div>
+
+    <div class="main-comunity">
+        <a href="#!/comunity"><h3 class="main-title">헬스장 커뮤니티 <a><label class="label label-default">더보기</label></a></h3></a>
+        <div class="main-comunity-box main-box">
+            <div class="main-comunity-img"></div>
+            <div>
+                <h4>서울과기대 헬스장 모임 만들었습니다 :)</h4>
+                <ul>
+                    <li>PAROMA</li>
+                    <li>2017.05.26</li>
+                    <li><label class="label label-danger">좋아요 117</label></li>
+                </ul>
+                <p>서울과학기술대학교 피트니스 클럽 헬스장 모임 만들었습니다! 운동하면서 서로서로 코칭도 해주고 트레이닝도 같이 받아봐요!<br>카톡주시면 단톡방 초대해 드리겠습니다<br>핸드폰 010-1234-5678</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-health">
+        <a href="#!/today"><h3 class="main-title">오늘의 추천 루틴<a><label class="label label-default">더보기</label></a></h3></a>
+        <div class="main-health-box">
+            <div class="main-health-img"></div>
+            <div class="main-health-contents">
+                <h4 class="text-white">다가오는 여름을 준비하세요!</h4>
+                <p class="text-white">복부와 옆구리살, 등살을 잡아주는 운동법</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-market">
+        <a href="#!/market"><h3 class="main-title">헬스장 장터<a><label class="label label-default">더보기</label></a></h3></a>
+        <div class="main-market-box">
+            <div class="main-market-img"></div>
+            <h4>BSN 단백질보충제 초콜렛 밀크쉐이크</h4>
+            <h4 class="main-market-cash">47,300원 <span>(10g당 208원)</span><label class="label label-danger">HOT</label></h4>
+            <h5>무료배송</h5>
+            
+        </div>
+    </div>
+</div>
+
+<footer class="text-white">
+        - 서울과학기술대학교 마케팅창업전략 전미조<br>
+        - 권진승, 박진평, 김성연, 이상운<br>
+        - 헬스장 플랫폼 서비스 프로토타입<br>
+        - 가로규격 480px이상의 기기에서는 레이아웃 깨짐 혹은 보이지가 않습니다.
+</footer>

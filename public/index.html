@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="Myapp">
+    <head lang="en" >
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+        <script src="Myapp.js"></script>
+
+        <!--Component-->
+
+        <script src="view-ourhealth/ourhealth.component.js"></script>
+        <script src="view-main/main.component.js"></script>
+        <script src="view-reservation/reservation.component.js"></script>
+        <script src="view-comunity/comunity.component.js"></script>
+        <script src="view-today/today.component.js"></script>
+        <script src="view-market/market.component.js"></script>
+
+        <!--CSS-->
+
+        <link rel="stylesheet" type="text/css" href="css/ourhealth.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="css/reservation.css"/>
+        <link rel="stylesheet" type="text/css" href="css/comunity.css"/>
+        <link rel="stylesheet" type="text/css" href="css/today.css"/>
+        <link rel="stylesheet" type="text/css" href="css/market.css"/>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="contianer-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#!/main">우리동네 헬스장</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <a href="#!/reservation"><li class="text-white text-center">헬스장 예약하기</li></a>
+                        <a href="#!/comunity"><li class="text-white text-center">헬스장 커뮤니티</li></a>
+                        <a href="#!/today"><li class="text-white text-center">나만의 운동법</li></a>
+                        <a href="#!/market"><li class="text-white text-center">장터</li></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="only-mobile">
+            <div ng-view></div>
+        </div>
+    </body>
+</html>
